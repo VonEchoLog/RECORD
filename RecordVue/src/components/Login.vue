@@ -1,13 +1,15 @@
 <template>
   <div id ="background">
     <div id ="loginDiv" >
-
+      <label-wrap class="label-wrap">系统登录</label-wrap>
+      <br>
       <el-input class="el-input" v-model="loginForm.username" placeholder="请输入账号"></el-input>
       <br>
       <el-input placeholder="请输入密码"  v-model="loginForm.password" show-password></el-input>
       <el-row>
         <el-button type="info" plain v-on:click="Login"> 登录 </el-button>
       </el-row>
+
     </div>
   </div>
 </template>
@@ -54,11 +56,12 @@ export default {
   right:0px;
   bottom:0px;
   /*background: black;*/
-  /*background: url("../../static/image/preview.jpg") no-repeat;*/
+  background: url("../../static/image/preview.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 #loginDiv {
+  background: whitesmoke;
   position: absolute;
   margin:auto;
   left:0;
@@ -67,7 +70,7 @@ export default {
   bottom:0;
   height:600px;
   width: 600px;
-  /*text-align: center;*/
+  text-align: center;
   border-radius:20px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 0px 6px;
 
@@ -77,6 +80,13 @@ export default {
   text-align: center;
   width: 400px;
   margin: 20px;
+}
+.label-wrap {
+  Line-height:200px;
+  height: 250px;
+  width: 600px;
+  font-size: 30px;
+  text-align: center;
 }
 
 </style>
