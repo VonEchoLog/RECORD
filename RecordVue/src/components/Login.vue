@@ -1,13 +1,13 @@
 <template>
   <div id ="background">
     <div id ="loginDiv" >
-      <label-wrap class="label-wrap">系统登录</label-wrap>
+      <label class="label-wrap">系统登录</label>
       <br>
       <el-input class="el-input" v-model="loginForm.username" placeholder="请输入账号"></el-input>
       <br>
       <el-input placeholder="请输入密码"  v-model="loginForm.password" show-password></el-input>
       <el-row>
-        <el-button type="info" plain v-on:click="Login"> 登录 </el-button>
+        <el-button class="el-button el-button--primary" type="info" plain v-on:click="login"> 登录 </el-button>
       </el-row>
 
     </div>
@@ -56,7 +56,7 @@ export default {
   right:0px;
   bottom:0px;
   /*background: black;*/
-  background: url("../../static/image/preview.jpg") no-repeat;
+  /*background: url("../../static/image/preview.jpg") no-repeat;*/
   background-size: cover;
   background-position: center;
 }
