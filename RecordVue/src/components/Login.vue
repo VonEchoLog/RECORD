@@ -56,7 +56,7 @@ export default {
   right:0px;
   bottom:0px;
   /*background: black;*/
-  /*background: url("../../static/image/preview.jpg") no-repeat;*/
+  background: url("../../static/image/preview.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -68,11 +68,12 @@ export default {
   right:0;
   top:0;
   bottom:0;
-  height:600px;
-  width: 600px;
+  height:650px;
+  width: 650px;
   text-align: center;
-  border-radius:20px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 0px 6px;
+  border-radius:30px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px, rgba(0, 0, 0, 0.2) 0px 0px 20px;
+  /*filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.6; //半透明效果*/
 
 }
 .el-input {
