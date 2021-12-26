@@ -8,7 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 // 设置反向代理
 let axios = require('axios')
-axios.default.baseurl = 'http://localhost:8443/api'
+axios.defaults.baseURL = 'http://localhost:8443/api'
 // 全局注册 this.$axios
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
