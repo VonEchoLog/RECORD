@@ -5,6 +5,7 @@ import com.record.recordmvc.vo.userVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.util.HtmlUtils;
 
@@ -13,11 +14,12 @@ import java.util.Objects;
 @Controller
 public class LoginController {
 
-    @ResponseBody
+
     @CrossOrigin
     @PostMapping(value = "api/login")
-    public Result login (userVO userVo){
-        String username=userVo.getUserName();
+    @ResponseBody
+    public Result login (@RequestBody userVO userVo){
+        String username=userVo.getUsername();
         username = HtmlUtils.htmlEscape(username);
         if (!Objects.equals("admin", username) || !Objects.equals("123456", userVo.getPassword())) {
             String message = "账号密码错误";
@@ -27,6 +29,6 @@ public class LoginController {
             return new Result(200);
         }
 
-
     }
+
 }

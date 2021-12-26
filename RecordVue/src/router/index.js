@@ -19,7 +19,7 @@ export default new Router({
       component: Login
     },
     {
-      path: '/appIndex',
+      path: '/index',
       name: 'AppIndex.vue',
       component: AppIndex
     }
