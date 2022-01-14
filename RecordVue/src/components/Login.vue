@@ -5,9 +5,9 @@
       <br>
       <el-input class="el-input" v-model="loginForm.username" placeholder="请输入账号"></el-input>
       <br>
-      <el-input placeholder="请输入密码"  v-model="loginForm.password" show-password></el-input>
+      <el-input placeholder="请输入密码"  v-model="loginForm.password" show-password @keyup.enter.native="login"></el-input>
       <el-row>
-        <el-button class="el-button el-button--primary" type="info" plain v-on:click="login"> 登录 </el-button>
+        <el-button  type="primary" size="medium " v-on:click="login" > 登录 </el-button>
       </el-row>
 
     </div>
@@ -17,6 +17,8 @@
 <script>
 export default {
   name: 'login',
+  created () {
+  },
   data () {
     return {
       loginForm: {
@@ -27,6 +29,7 @@ export default {
     }
   },
   methods: {
+
     login () {
       this.$axios
         .post('/login', {
@@ -41,6 +44,7 @@ export default {
         .catch(failResponse => {
         })
     }
+
   }
 
 }
@@ -61,6 +65,15 @@ export default {
   background-position: center;
 }
 #loginDiv {
+/*  border-radius: 15px;
+  background-clip: padding-box;
+  margin: 90px auto;
+  width: 350px;
+  padding: 35px 35px 15px 35px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 0 25px #cac6c6;*/
+
   background: whitesmoke;
   position: absolute;
   margin:auto;
@@ -72,8 +85,12 @@ export default {
   width: 650px;
   text-align: center;
   border-radius:30px;
+  box-shadow: 0 0 20px #cac6c6;
+
+  /*
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px, rgba(0, 0, 0, 0.2) 0px 0px 20px;
-  /*filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.6; //半透明效果*/
+  filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.6; //半透明效果
+  */
 
 }
 .el-input {

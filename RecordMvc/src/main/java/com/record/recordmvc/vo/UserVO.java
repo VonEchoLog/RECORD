@@ -1,7 +1,18 @@
 package com.record.recordmvc.vo;
 
-public class userVO {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="uservo")
+@JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
+public class UserVO {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     int id;
+
     private String username;
     private String password;
 
