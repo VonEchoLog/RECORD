@@ -15,7 +15,7 @@ module.exports = {
         target: 'http://localhost:8443',
         changeOrigin: true,
         pathRewirte: {
-          '^/api': ''
+          '^/api': 'api'
         }
       }
     },
