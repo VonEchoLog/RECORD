@@ -28,6 +28,7 @@ public class LoginController {
         username = HtmlUtils.htmlEscape(username);
         UserVO userVO =userService.get(username,requestUser.getPassword());
         if(userVO!=null){
+            System.out.println("测试");
             return new Result(200);
         }else{
             return new Result(400);
